@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href="homepage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex-container">
+    <h1>Hello, Wanderer</h1><br><br>
+
+    <button id="logout">Logout</button>
+    </div>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+    import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+    import { getAuth, signOut, onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD0dd-gN70xeAOwv3u2IgCbRvN4XIScIkY",
+      authDomain: "login-page-f0b50.firebaseapp.com",
+      databaseURL: "https://login-page-f0b50-default-rtdb.firebaseio.com",
+      projectId: "login-page-f0b50",
+      storageBucket: "login-page-f0b50.appspot.com",
+      messagingSenderId: "903933076580",
+      appId: "1:903933076580:web:06b9d8f466fe5d66486b71"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+
+
+    logout.addEventListener('click',(e) =>  {
+
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                const uid = user.uid;
+                var displayName = user.displayname
+                document.getElementById("user1").innerHTML = "Hello, "+ displayName;
+                console.log(user)
+            }
+            });
+
+        signOut(auth).then(() => {
+            // Sign-out successful.
+            alert("User Signed Out!")
+            location.replace("login.html")
+        }).catch((error) => {
+            // An error happened.
+            alert("Error")
+        });
+
+       
+             
+    });
+
+  </script>
+</html>

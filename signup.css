@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("47878.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.regbox{
+    width: 400px;
+    height: 600px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.regbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.regbox input{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.regbox input[type="email"], input[type="password"], input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.regbox button
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(207, 19, 50);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 340px;
+}
+
+.regbox button:hover
+{
+    cursor: pointer;
+    background: rgb(23, 28, 110);
+}
+
+.regbox a{
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}

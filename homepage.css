@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("84303.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    flex-direction: column;
+  }
+
+h1{
+   align-self: center;
+   font-size: 72px; 
+   color: #fff;
+}
+
+button
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(207, 19, 50);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 260px;
+    margin-bottom: 20px;
+}
+
+button:hover
+{
+    cursor: pointer;
+    background: rgb(23, 28, 110);
+}
